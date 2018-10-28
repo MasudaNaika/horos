@@ -10896,7 +10896,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -f \"$PROJECT_DIR/Binaries/odt2pdf/build/odt2pdf\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/MacOS/\"\nexit 0";
+			shellScript = "#XCode 10 seems to have a bug or new behavior that makes applescript to be built into scpt\n#https://forum.latenightsw.com/t/xcode-10-and-applescript-files/1536\ncp -f \"$PROJECT_DIR/Horos/Resources/ReportsToPDF/pages2pdf.applescript\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Resources/\"\ncp -f \"$PROJECT_DIR/Horos/Resources/ReportsToPDF/pages092pdf.applescript\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Resources/\"\ncp -f \"$PROJECT_DIR/Horos/Resources/ReportsToPDF/pages2pdf.applescript\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Resources/\"\ncp -f \"$PROJECT_DIR/Horos/Resources/ReportsToPDF/word2pdf.applescript\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Resources/\"\n\ncp -f \"$PROJECT_DIR/Binaries/odt2pdf/build/odt2pdf\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/MacOS/\"\nexit 0\n";
 		};
 		BF7486A40CC6AA5C00198387 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -13332,6 +13332,7 @@
 					"$(PROJECT_DIR)/DICOMPrint",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OSACOMPILE_EXECUTE_ONLY = NO;
 				OTHER_CFLAGS = "-fvisibility=default";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -13606,6 +13607,7 @@
 					"$(PROJECT_DIR)/DICOMPrint",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OSACOMPILE_EXECUTE_ONLY = NO;
 				OTHER_CFLAGS = "-fvisibility=default";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
